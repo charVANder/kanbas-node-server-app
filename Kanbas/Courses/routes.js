@@ -33,7 +33,6 @@
 //   app.get("/api/Courses/:courseId", findCourseById);
 //   app.put("/api/Courses/:courseId", updateCourse);
 // }
-
 // OLD VERSION - Van
 import Database from "../Database/index.js";
 

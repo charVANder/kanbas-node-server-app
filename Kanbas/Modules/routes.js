@@ -41,7 +41,6 @@
 //   app.put("/api/modules/:moduleId", updateModule);
 //   app.get("/api/Courses/:courseId/modules", findModulesByCourse);
 // }
-
 // Old code here -Van
 import db from "../Database/index.js";
 export default function ModuleRoutes(app) {
