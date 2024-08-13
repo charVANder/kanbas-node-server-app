@@ -7,10 +7,14 @@ export default function ModuleRoutes(app) {
     res.json(module);
   };
 
+  // const deleteModule = async (req, res) => {
+  //   const status = await dao.deleteModule(req.params.moduleId);
+  //   console.log(req.params.moduleId, status);
+  //   res.json(status);
+  // };
   const deleteModule = async (req, res) => {
-    const status = await dao.deleteModule(req.params.moduleId);
-    console.log(req.params.moduleId, status);
-    res.json(status);
+    await dao.deleteModule(req.params.moduleId);
+    res.sendStatus(204); // Send an appropriate status code
   };
 
   const findAllModules = async (req, res) => {
@@ -23,10 +27,14 @@ export default function ModuleRoutes(app) {
     res.json(module);
   };
 
+  // const updateModule = async (req, res) => {
+  //   const { moduleId } = req.params;
+  //   const status = await dao.updateModule(moduleId, req.body);
+  //   res.json(status);
+  // };
   const updateModule = async (req, res) => {
-    const { moduleId } = req.params;
-    const status = await dao.updateModule(moduleId, req.body);
-    res.json(status);
+    await dao.updateModule(req.params.moduleId, req.body);
+    res.sendStatus(204); // Send an appropriate status code
   };
 
   const findModulesForCourse = async (req, res) => {
